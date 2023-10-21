@@ -99,32 +99,58 @@ bool assert_state_equals(game_state_t* expected, game_state_t* actual) {
 
 bool test_is_tail() {
   // TODO: Implement this if you'd like!
-  printf("%s\n", "test_is_tail doesn't have any tests.");
-  return true;
+  printf("%s\n", "test_is_tail test.");
+  bool temp_1 = is_tail('w');
+  bool temp_2 = is_tail('a');
+  bool temp_3 = is_tail('s');
+  bool temp_4 = is_tail('d');
+  return (temp_1 && temp_2 && temp_3 && temp_4);
 }
 
 bool test_is_snake() {
   // TODO: Implement this if you'd like!
-  printf("%s\n", "test_is_snake doesn't have any tests.");
+  printf("%s\n", "test_is_snake tests.");
+  bool temp_1 = is_snake('w');
+  bool temp_2 = is_snake('a');
+  bool temp_3 = is_snake('s');
+  bool temp_4 = is_snake('d');
+  bool temp_5 = is_snake('^');
+  bool temp_6 = is_snake('<');
+  bool temp_7 = is_snake('>');
+  bool temp_8 = is_snake('v');
+  bool temp_9 = is_snake('x');
+  return (temp_1 && temp_2 && temp_3 && temp_4 && temp_5 && temp_6 && temp_7 && temp_8 && temp_9);
   return true;
 }
 
 bool test_body_to_tail() {
   // TODO: Implement this if you'd like!
-  printf("%s\n", "test_body_to_tail doesn't have any tests.");
-  return true;
+  printf("%s\n", "test_body_to_tail tests.");
+  bool temp_1 = ('w' == body_to_tail('^'));
+  bool temp_2 = ('a' == body_to_tail('<'));
+  bool temp_3 = ('d' == body_to_tail('>'));
+  bool temp_4 = ('s' == body_to_tail('v'));
+  return (temp_1 && temp_2 && temp_3 && temp_4);
 }
 
 bool test_incr_x() {
   // TODO: Implement this if you'd like!
-  printf("%s\n", "test_incr_x doesn't have any tests.");
-  return true;
+  printf("%s\n", "test_incr_x tests.");
+  bool temp_1 = (1 == incr_x('>'));
+  bool temp_2 = (1 == incr_x('d'));
+  bool temp_3 = (-1 == incr_x('<'));
+  bool temp_4 = (-1 == incr_x('a'));
+  return (temp_1 && temp_2 && temp_3 && temp_4);
 }
 
 bool test_incr_y() {
   // TODO: Implement this if you'd like!
-  printf("%s\n", "test_incr_y doesn't have any tests.");
-  return true;
+  printf("%s\n", "test_incr_y tests.");
+  bool temp_1 = (1 == incr_y('v'));
+  bool temp_2 = (1 == incr_y('s'));
+  bool temp_3 = (-1 == incr_y('^'));
+  bool temp_4 = (-1 == incr_y('w'));
+  return (temp_1 && temp_2 && temp_3 && temp_4);
 }
 
 bool test_create_default_state() {
